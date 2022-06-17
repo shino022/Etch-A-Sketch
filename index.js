@@ -13,13 +13,22 @@ function createGrid(numOfGrid){
       //create a square and append it into the row
       const square = document.createElement('div');
       square.classList.add('square');
+      square.addEventListener('mouseover',() => changeColor(square));
       row.appendChild(square);
     }
     //append row into container
     container.appendChild(row);
   }
 }
+function changeColor(square){
+  console.log(square);
+  square.style.background='yellow';
+}
 function changeNumGrid() {
   const userNumOfGrid = prompt("Enter the number of squares per side");
-
+  if(userNumOfGrid>=100){
+    return;
+  }
+  createGrid(userNumOfGrid);
 }
+createGrid(DefaultNumOfGrid);
