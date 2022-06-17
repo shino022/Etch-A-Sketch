@@ -6,6 +6,9 @@ for(let i = 0; i < numOfGrid; i++) {
   row.classList.add('row');
   for(let j = 0; j < numOfGrid; j++) {
     //create a square and append it into the row
+    const square = document.createElement('div');
+    square.classList.add('square');
+    row.appendChild(square);
   }
   //append row into container
   container.appendChild(row);
