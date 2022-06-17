@@ -13,3 +13,8 @@ for(let i = 0; i < numOfGrid; i++) {
   //append row into container
   container.appendChild(row);
 }
+
+function changeNumGrid() {
+  let numOfGridInput = prompt("Enter the number of squares per side");
+
+}
